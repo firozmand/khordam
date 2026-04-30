@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#030407" />
+    <meta name="description" content="ثبت وعده‌های غذایی روزانه" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ثبت وعده غذایی</title>
+</head>
+
+<body>
+    <header class="glass-nav">
+        <nav class="nav-center">
+            <button id="homeBtn" class="nav-btn">خانه</button>
+            <button id="resetBtn" class="nav-btn">ریست</button>
+            <button id="aboutBtn" class="nav-btn">درباره ما</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" class="center-screen">
+            <h1>ثبت وعده غذایی</h1>
+            <p>وعده‌های غذایی روزت رو مرحله‌به‌مرحله ثبت کن.</p>
+            <button id="startBtn" class="primary-btn">شروع</button>
+            <button id="installBtn" class="secondary-btn hidden">نصب اپلیکیشن</button>
+        </section>
+
+        <section id="step" class="hidden">
+            <h2 id="mealTitle">عنوان وعده</h2>
+            <p>می‌تونی غذا رو بنویسی یا یکی از پیشنهادها رو انتخاب کنی.</p>
+
+            <textarea id="mealInput" placeholder="مثلاً: نان، پنیر، گردو..."></textarea>
+
+            <div id="suggestionGrid" class="suggestion-grid"></div>
+
+            <button id="nextBtn" class="primary-btn">مرحله بعد</button>
+        </section>
+
+        <section id="result" class="hidden">
+            <h2>خلاصه وعده‌ها</h2>
+            <div id="reportBox" class="report-box"></div>
+            <button id="copyBtn" class="primary-btn">کپی</button>
+        </section>
+    </main>
+
+    <div id="aboutModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <h3>درباره ما</h3>
+            <p>این برنامه برای ثبت سریع وعده‌های غذایی طراحی شده و هیچ اطلاعاتی ذخیره نمی‌کند.</p>
+            <button id="closeAboutBtn" class="secondary-btn">بستن</button>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p>© 2026 - همه حقوق محفوظ است</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
