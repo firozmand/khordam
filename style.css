@@ -444,3 +444,126 @@ footer p {
 .report-item p {
     margin: 0;
 }
+
+.analysis-box {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    text-align: right;
+    line-height: 1.8;
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.analysis-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stat-box {
+    background: rgba(255, 140, 66, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.stat-label {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.stat-value.good {
+    color: #4ade80;
+}
+
+.stat-value.bad {
+    color: #ff6b6b;
+}
+
+.verdict-box {
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.2), rgba(255, 140, 66, 0.05));
+    border-right: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.verdict-box.warning {
+    border-right-color: #ff6b6b;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 107, 107, 0.05));
+}
+
+.verdict-box.success {
+    border-right-color: #4ade80;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(74, 222, 128, 0.05));
+}
+
+.food-section {
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.food-section.good {
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.food-section.bad {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.food-item {
+    padding: 6px 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.tips-box {
+    background: rgba(255, 140, 66, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.tips-title {
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.tip {
+    padding: 6px 0;
+    color: var(--text);
+    font-size: 0.95rem;
+}
