@@ -17,16 +17,17 @@
 }
 
 :root {
-    --bg: #030504;
-    --text: #d9ffe8;
-    --muted: rgba(217, 255, 232, 0.62);
-    --green: #31ff86;
-    --green-soft: rgba(49, 255, 134, 0.18);
-    --glass: rgba(255, 255, 255, 0.075);
-    --glass-strong: rgba(255, 255, 255, 0.12);
-    --border: rgba(255, 255, 255, 0.18);
+    --bg: #0a0a0a;
+    --text: #ffe4cc;
+    --muted: rgba(255, 228, 204, 0.62);
+    --green: #ff8c42;
+    --green-soft: rgba(255, 140, 66, 0.18);
+    --glass: rgba(255, 140, 66, 0.075);
+    --glass-strong: rgba(255, 140, 66, 0.12);
+    --border: rgba(255, 140, 66, 0.18);
     --shadow: rgba(0, 0, 0, 0.45);
     --radius: 28px;
+    --accent: #ff8c42;
 }
 
 * {
@@ -45,10 +46,10 @@ body {
     direction: rtl;
     color: var(--text);
     background:
-        radial-gradient(circle at 20% 10%, rgba(49, 255, 134, 0.22), transparent 32%),
-        radial-gradient(circle at 85% 20%, rgba(0, 255, 170, 0.14), transparent 28%),
-        radial-gradient(circle at 50% 90%, rgba(49, 255, 134, 0.12), transparent 34%),
-        linear-gradient(145deg, #020302 0%, #07110b 45%, #000 100%);
+        radial-gradient(circle at 20% 10%, rgba(255, 140, 66, 0.22), transparent 32%),
+        radial-gradient(circle at 85% 20%, rgba(255, 120, 50, 0.14), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(255, 140, 66, 0.12), transparent 34%),
+        linear-gradient(145deg, #000000 0%, #0a0a0a 45%, #000 100%);
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -61,8 +62,8 @@ body::before {
     inset: 0;
     pointer-events: none;
     background:
-        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255, 140, 66, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 140, 66, 0.02) 1px, transparent 1px);
     background-size: 36px 36px;
     mask-image: radial-gradient(circle at center, black, transparent 80%);
     z-index: -1;
@@ -76,7 +77,7 @@ body::after {
     right: -150px;
     bottom: -150px;
     border-radius: 50%;
-    background: rgba(49, 255, 134, 0.18);
+    background: rgba(255, 140, 66, 0.18);
     filter: blur(80px);
     z-index: -1;
 }
@@ -86,13 +87,13 @@ body::after {
 .glass-footer,
 .glass-card {
     background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.16),
-            rgba(255, 255, 255, 0.045));
+            rgba(255, 140, 66, 0.16),
+            rgba(255, 140, 66, 0.045));
     border: 1px solid var(--border);
     box-shadow:
         0 24px 70px var(--shadow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.24),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+        inset 0 1px 0 rgba(255, 140, 66, 0.24),
+        inset 0 -1px 0 rgba(255, 140, 66, 0.06);
     backdrop-filter: blur(26px) saturate(180%);
     -webkit-backdrop-filter: blur(26px) saturate(180%);
 }
@@ -150,12 +151,12 @@ main {
     padding: clamp(22px, 5vw, 42px);
     border-radius: var(--radius);
     background: linear-gradient(145deg,
-            rgba(255, 255, 255, 0.14),
-            rgba(255, 255, 255, 0.045));
+            rgba(255, 140, 66, 0.14),
+            rgba(255, 140, 66, 0.045));
     border: 1px solid var(--border);
     box-shadow:
         0 30px 90px rgba(0, 0, 0, 0.48),
-        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        inset 0 1px 0 rgba(255, 140, 66, 0.22);
     backdrop-filter: blur(32px) saturate(190%);
     -webkit-backdrop-filter: blur(32px) saturate(190%);
     position: relative;
@@ -169,8 +170,8 @@ main {
     position: absolute;
     inset: -2px;
     background:
-        radial-gradient(circle at 20% 0%, rgba(49, 255, 134, 0.24), transparent 28%),
-        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.12), transparent 26%);
+        radial-gradient(circle at 20% 0%, rgba(255, 140, 66, 0.24), transparent 28%),
+        radial-gradient(circle at 90% 80%, rgba(255, 140, 66, 0.12), transparent 26%);
     pointer-events: none;
 }
 
@@ -210,7 +211,7 @@ h1 {
     font-weight: 800;
     letter-spacing: -1.5px;
     color: var(--green);
-    text-shadow: 0 0 28px rgba(49, 255, 134, 0.32);
+    text-shadow: 0 0 28px rgba(255, 140, 66, 0.32);
 }
 
 h2 {
@@ -234,7 +235,7 @@ textarea {
     width: 100%;
     min-height: 150px;
     resize: vertical;
-    border: 1px solid rgba(49, 255, 134, 0.22);
+    border: 1px solid rgba(255, 140, 66, 0.22);
     outline: none;
     border-radius: 24px;
     padding: 16px;
@@ -243,7 +244,7 @@ textarea {
     color: var(--text);
     background: rgba(0, 0, 0, 0.28);
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 1px 0 rgba(255, 140, 66, 0.08),
         0 16px 40px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -251,13 +252,13 @@ textarea {
 }
 
 textarea::placeholder {
-    color: rgba(217, 255, 232, 0.42);
+    color: rgba(255, 228, 204, 0.42);
 }
 
 textarea:focus {
-    border-color: rgba(49, 255, 134, 0.75);
+    border-color: rgba(255, 140, 66, 0.75);
     box-shadow:
-        0 0 0 4px rgba(49, 255, 134, 0.11),
+        0 0 0 4px rgba(255, 140, 66, 0.11),
         0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
@@ -270,17 +271,17 @@ textarea:focus {
 
 .suggestion-box {
     min-height: 58px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 140, 66, 0.16);
     border-radius: 22px;
     color: var(--text);
     font: inherit;
     font-weight: 600;
     cursor: pointer;
     background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
+        linear-gradient(145deg, rgba(255, 140, 66, 0.13), rgba(255, 140, 66, 0.045));
     box-shadow:
         0 16px 38px rgba(0, 0, 0, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        inset 0 1px 0 rgba(255, 140, 66, 0.18);
     backdrop-filter: blur(22px) saturate(170%);
     -webkit-backdrop-filter: blur(22px) saturate(170%);
     transition: 0.22s ease;
@@ -289,9 +290,9 @@ textarea:focus {
 .suggestion-box:hover {
     transform: translateY(-2px) scale(1.015);
     color: var(--green);
-    border-color: rgba(49, 255, 134, 0.46);
+    border-color: rgba(255, 140, 66, 0.46);
     background:
-        linear-gradient(145deg, rgba(49, 255, 134, 0.22), rgba(255, 255, 255, 0.06));
+        linear-gradient(145deg, rgba(255, 140, 66, 0.22), rgba(255, 140, 66, 0.06));
 }
 
 .suggestion-box:active {
@@ -312,10 +313,10 @@ textarea:focus {
 }
 
 .primary-btn {
-    color: #001f0d;
-    background: linear-gradient(135deg, #7dffb5, #31ff86);
+    color: #1a0a00;
+    background: linear-gradient(135deg, #ffb380, #ff8c42);
     box-shadow:
-        0 16px 34px rgba(49, 255, 134, 0.24),
+        0 16px 34px rgba(255, 140, 66, 0.24),
         inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
@@ -330,12 +331,12 @@ textarea:focus {
 
 .secondary-btn {
     color: var(--green);
-    background: rgba(49, 255, 134, 0.08);
-    border: 1px solid rgba(49, 255, 134, 0.32);
+    background: rgba(255, 140, 66, 0.08);
+    border: 1px solid rgba(255, 140, 66, 0.32);
 }
 
 .secondary-btn:hover {
-    background: rgba(49, 255, 134, 0.16);
+    background: rgba(255, 140, 66, 0.16);
 }
 
 /* Modal */
@@ -372,7 +373,7 @@ footer.glass-footer {
 
 footer p {
     font-size: 0.85rem;
-    color: rgba(217, 255, 232, 0.58);
+    color: rgba(255, 228, 204, 0.58);
 }
 
 /* Utilities */
@@ -430,8 +431,8 @@ footer p {
 .report-item {
     padding: 14px 16px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 140, 66, 0.06);
+    border: 1px solid rgba(255, 140, 66, 0.08);
 }
 
 .report-item strong {
