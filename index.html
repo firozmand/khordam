@@ -17,6 +17,7 @@
     <header class="glass-nav">
         <nav class="nav-center">
             <button id="homeBtn" class="nav-btn">خانه</button>
+            <button id="foodsBtn" class="nav-btn">بانک غذاها</button>
             <button id="resetBtn" class="nav-btn">ریست</button>
             <button id="aboutBtn" class="nav-btn">درباره ما</button>
         </nav>
@@ -52,6 +53,21 @@
             <h2>📊 تحلیل رژیم غذایی</h2>
             <div id="analysisResult" class="analysis-box"></div>
             <button id="backFromAnalysisBtn" class="secondary-btn">بازگشت</button>
+        </section>
+
+        <section id="foods" class="hidden">
+            <h2>بانک جامع غذاها</h2>
+            <p>غذاها را جستجو کن، براساس دسته‌بندی فیلتر کن و مقادیر تغذیه‌ای را برای تحلیل دقیق‌تر ببین.</p>
+
+            <div class="food-tools">
+                <input id="foodSearchInput" type="text" placeholder="مثلا: برنج، قیمه، ماست یونانی، ماهی سالمون" />
+                <select id="foodCategoryFilter">
+                    <option value="all">همه دسته‌ها</option>
+                </select>
+            </div>
+
+            <div id="foodStats" class="food-stats"></div>
+            <div id="foodLibraryGrid" class="food-library-grid"></div>
         </section>
 
     </main>

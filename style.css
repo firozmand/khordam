@@ -110,7 +110,7 @@ header.glass-nav {
 
 .nav-center {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 6px;
 }
 
@@ -145,7 +145,8 @@ main {
 
 .center-screen,
 #step,
-#result {
+#result,
+#foods {
     width: 100%;
     min-height: 58vh;
     padding: clamp(22px, 5vw, 42px);
@@ -165,7 +166,8 @@ main {
 
 .center-screen::before,
 #step::before,
-#result::before {
+#result::before,
+#foods::before {
     content: "";
     position: absolute;
     inset: -2px;
@@ -177,7 +179,8 @@ main {
 
 .center-screen>*,
 #step>*,
-#result>* {
+#result>*,
+#foods>* {
     position: relative;
     z-index: 1;
 }
@@ -192,7 +195,8 @@ main {
 }
 
 #step,
-#result {
+#result,
+#foods {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -566,4 +570,82 @@ footer p {
     padding: 6px 0;
     color: var(--text);
     font-size: 0.95rem;
+}
+
+.food-tools {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.food-tools input,
+.food-tools select {
+    width: 100%;
+    border: 1px solid rgba(255, 140, 66, 0.26);
+    outline: none;
+    border-radius: 16px;
+    padding: 12px 14px;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.food-tools input:focus,
+.food-tools select:focus {
+    border-color: rgba(255, 140, 66, 0.7);
+    box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.14);
+}
+
+.food-stats {
+    margin: 8px 0 12px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.food-library-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    max-height: 54vh;
+    overflow-y: auto;
+    padding-left: 2px;
+}
+
+.food-card {
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255, 140, 66, 0.08);
+    border: 1px solid rgba(255, 140, 66, 0.18);
+}
+
+.food-card h4 {
+    margin: 0 0 6px;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.food-meta {
+    color: var(--accent);
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+}
+
+.food-nutrition {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 8px;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+@media (max-width: 520px) {
+    .food-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .food-library-grid {
+        grid-template-columns: 1fr;
+    }
 }
