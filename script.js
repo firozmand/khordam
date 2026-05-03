@@ -87,7 +87,7 @@ function saveProfile() {
 function fillProfileForm() {
     profileName.value = profile.name || "";
     profileAge.value = profile.age || 26;
-    profileWeight.value = profile.weightKg || 117;
+    profileWeight.value = profile.weightKg || 100;
     profileHeight.value = profile.heightCm || 180;
     profileActivity.value = profile.activityFactor || 1.4;
     profileGender.value = profile.gender || "male";
@@ -98,7 +98,7 @@ function applyProfileForm() {
         ...profile,
         name: profileName.value.trim() || "کاربر",
         age: Number(profileAge.value) || 26,
-        weightKg: Number(profileWeight.value) || 117,
+        weightKg: Number(profileWeight.value) || 100,
         heightCm: Number(profileHeight.value) || 180,
         activityFactor: Number(profileActivity.value) || 1.4,
         gender: profileGender.value || "male"
@@ -283,7 +283,7 @@ function analyzeDaily() {
 
     totalCalories += sparklingWaterCalories + dressingCalories;
 
-    const weight = Number(profile.weightKg) || 117;
+    const weight = Number(profile.weightKg) || 100;
     const height = Number(profile.heightCm) || 180;
     const age = Number(profile.age) || 26;
     const activityFactor = Number(profile.activityFactor) || 1.4;

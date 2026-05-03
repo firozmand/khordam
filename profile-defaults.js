@@ -1,7 +1,7 @@
 window.DEFAULT_PROFILE = {
     name: "کاربر",
     age: 26,
-    weightKg: 117,
+    weightKg: 100,
     heightCm: 180,
     gender: "male",
     activityFactor: 1.4,
