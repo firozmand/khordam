@@ -14,26 +14,35 @@
 </head>
 
 <body>
+    <div class="bg-glow bg-glow-one" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-two" aria-hidden="true"></div>
+
     <header class="glass-nav">
         <nav class="nav-center">
             <button id="homeBtn" class="nav-btn">خانه</button>
-            <button id="foodsBtn" class="nav-btn">بانک غذاها</button>
+            <button id="profileBtn" class="nav-btn">پروفایل</button>
             <button id="resetBtn" class="nav-btn">ریست</button>
             <button id="aboutBtn" class="nav-btn">درباره ما</button>
         </nav>
     </header>
 
-    <main>
-        <section id="intro" class="center-screen">
-            <h1>چی خوردم ؟</h1>
-            <p>وعده‌های غذایی روزت رو مرحله‌به‌مرحله ثبت کن.</p>
-            <button id="startBtn" class="primary-btn">شروع</button>
-            <button id="installBtn" class="secondary-btn hidden">نصب اپلیکیشن</button>
+    <main class="app-shell">
+        <section id="intro" class="center-screen panel">
+            <span class="badge">نسخه آفلاین آماده نصب</span>
+            <h1>چی خوردم؟</h1>
+            <p>ثبت وعده ها + تحلیل سریع کالری و پروتئین با ظاهر جدید و کاملا سازگار با گوشی.</p>
+            <div class="hero-meta">
+                <span>6 وعده روزانه</span>
+                <span>تحلیل خودکار</span>
+                <span>ذخیره پروفایل</span>
+            </div>
+            <button id="startBtn" class="primary-btn">شروع ثبت امروز</button>
+            <button id="installBtn" class="secondary-btn hidden">نصب روی گوشی</button>
         </section>
 
-        <section id="step" class="hidden">
+        <section id="step" class="hidden panel">
             <h2 id="mealTitle">عنوان وعده</h2>
-            <p>می‌تونی غذا رو بنویسی یا یکی از پیشنهادها رو انتخاب کنی.</p>
+            <p>غذا را بنویس یا از پیشنهادها لمس کن تا اضافه شود.</p>
 
             <textarea id="mealInput" placeholder="مثلاً: نان، پنیر، گردو..."></textarea>
 
@@ -42,32 +51,46 @@
             <button id="nextBtn" class="primary-btn">مرحله بعد</button>
         </section>
 
-        <section id="result" class="hidden">
+        <section id="result" class="hidden panel">
             <h2>خلاصه وعده‌ها</h2>
             <div id="reportBox" class="report-box"></div>
-            <button id="copyBtn" class="primary-btn">کپی</button>
+            <button id="copyBtn" class="secondary-btn">کپی</button>
             <button id="analyzeBtn" class="primary-btn">تحلیل 🔍</button>
         </section>
 
-        <section id="analysis" class="center-screen hidden">
+        <section id="analysis" class="center-screen hidden panel">
             <h2>📊 تحلیل رژیم غذایی</h2>
             <div id="analysisResult" class="analysis-box"></div>
             <button id="backFromAnalysisBtn" class="secondary-btn">بازگشت</button>
         </section>
 
-        <section id="foods" class="hidden">
-            <h2>بانک جامع غذاها</h2>
-            <p>غذاها را جستجو کن، براساس دسته‌بندی فیلتر کن و مقادیر تغذیه‌ای را برای تحلیل دقیق‌تر ببین.</p>
-
-            <div class="food-tools">
-                <input id="foodSearchInput" type="text" placeholder="مثلا: برنج، قیمه، ماست یونانی، ماهی سالمون" />
-                <select id="foodCategoryFilter">
-                    <option value="all">همه دسته‌ها</option>
-                </select>
+        <section id="profile" class="hidden panel">
+            <h2>پروفایل</h2>
+            <p>مشخصات پیش فرض قابل تغییر هستند و برای تحلیل استفاده می شوند.</p>
+            <div class="profile-grid">
+                <label>نام
+                    <input id="profileName" type="text" />
+                </label>
+                <label>سن
+                    <input id="profileAge" type="number" min="10" max="90" />
+                </label>
+                <label>وزن (کیلوگرم)
+                    <input id="profileWeight" type="number" min="30" max="250" />
+                </label>
+                <label>قد (سانتی متر)
+                    <input id="profileHeight" type="number" min="120" max="230" />
+                </label>
+                <label>ضریب فعالیت
+                    <input id="profileActivity" type="number" step="0.01" min="1.2" max="2" />
+                </label>
+                <label>جنسیت
+                    <select id="profileGender">
+                        <option value="male">مرد</option>
+                        <option value="female">زن</option>
+                    </select>
+                </label>
             </div>
-
-            <div id="foodStats" class="food-stats"></div>
-            <div id="foodLibraryGrid" class="food-library-grid"></div>
+            <button id="saveProfileBtn" class="primary-btn">ذخیره پروفایل</button>
         </section>
 
     </main>
@@ -84,6 +107,8 @@
         <p>© 2026 - همه حقوق محفوظ است</p>
     </footer>
 
+    <script src="./food-bank.js"></script>
+    <script src="./profile-defaults.js"></script>
     <script src="./script.js"></script>
 </body>
 
